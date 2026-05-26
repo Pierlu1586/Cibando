@@ -1,1 +1,39 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+@import "~primeicons/primeicons.css";
+
+body{
+  font-family: "Montserrat", sans-serif;
+}
+
+nav{
+  padding-left: 10px !important;
+}
+
+.nav-bg{
+  background-color: #8e210b !important;
+}
+
+.contenitore{
+  padding: 16px !important;
+}
+
+.logo{
+  border-radius: 10px;
+  width: 50px;
+  margin-right: 10px;
+}
+
+.label-carousel{
+  background-color: #8e210b !important;
+}
+
+.carousel-item {
+  aspect-ratio: 16/9;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
