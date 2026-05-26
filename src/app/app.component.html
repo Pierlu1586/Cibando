@@ -1,45 +1,8 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary nav-bg" data-bs-theme="dark">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#"><img src="./../assets/logo_cibando.png" class="logo">Cibando</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav">
-        <a class="nav-link active" aria-current="page" href="#"><i class="pi pi-home"></i> Home</a>
-        <a class="nav-link" href="#"><i class="pi pi-book"></i> Ricette</a>
-        <a class="nav-link" href="#"><i class="pi pi-envelope"></i>  Contatti</a>
-      </div>
-    </div>
-  </div>
-</nav>
-
-<div id="carouselExampleIndicators" class="carousel slide">
-  <div class="carousel-indicators">
-    <button *ngFor="let food of foods; let i = index" type="button" data-bs-target="#carouselExampleIndicators" [class.active]="i===0" [attr.data-bs-slide-to]="i"></button>
-  </div>
-  <div class="carousel-inner">
-   <div class="carousel-item active" *ngFor="let food of foods; let i = index" [class.active]="i === 0">
-      <img [src]="pathFoodsPictures + food.id + '.jpg'" class="d-block w-100" [alt]="food.label">
-      <div class="carousel-caption d-none d-md-block">
-        <h5 class="label-carousel">{{food.label}}</h5>
-      </div>
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
-
+<app-header></app-header>
+<app-carousel></app-carousel>
 <div class="contenitore">
-  <h2>Titolo app hot reloading</h2>
-  <p class="paragrafo">Questo è il <span>paragrafo</span> dell'app.</p>
-  ecco un <span>altro</span> testo
+  <h2>Benvenuti su Cibando</h2>
+  <p class="paragrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste doloribus at cumque nostrum vero vel quo, dignissimos quos ullam rem nihil, molestias aperiam veniam, laudantium labore perspiciatis iure? Asperiores adipisci tempora iste nam consequuntur soluta deleniti repellat accusantium repudiandae fugit, dolore quidem earum optio. Laboriosam placeat ipsa ipsam quasi veritatis corrupti sequi excepturi? Quidem excepturi rem commodi praesentium, cupiditate molestias odit pariatur ad iure saepe culpa impedit aperiam, natus quaerat quam ullam, laborum perspiciatis sapiente? Unde facilis iure nostrum. Reiciendis culpa repellendus eveniet quam adipisci dolores facere, dolore officiis, tempora dolor eos, harum vel animi nobis recusandae hic excepturi est reprehenderit eligendi. Voluptatem accusamus, unde quaerat atque eum est velit non quo reprehenderit eligendi nobis totam, voluptates repellendus sit enim excepturi architecto cupiditate. Adipisci hic praesentium nam officiis enim natus quis, illum dolorum, magnam expedita molestias earum sapiente error sint culpa aut exercitationem? Quia, non ut. Accusantium, at vitae? Quisquam sunt molestias earum. Corporis, eligendi laudantium, incidunt odio aut facere nihil odit quidem molestias et sequi excepturi. Suscipit vitae qui, nesciunt dolorum sit veritatis accusantium deserunt temporibus facilis amet quo molestias soluta asperiores quod aspernatur itaque exercitationem. Quisquam nesciunt omnis sint? Veniam labore consectetur, cumque nisi esse delectus quae, vero aliquid autem ad expedita distinctio, blanditiis neque eligendi illum voluptate aliquam nostrum rerum? Dolorum consequuntur quia suscipit, consequatur alias omnis minus est, delectus beatae ea amet, at nisi! Accusamus tenetur autem consequatur voluptatem vitae temporibus officiis, adipisci quaerat, similique laudantium tempore vero, impedit sunt corrupti porro nemo! Officia beatae illum nobis, aut inventore, eius quibusdam, possimus excepturi ipsa maxime sint soluta ipsum itaque quis dignissimos natus aliquam blanditiis. Soluta dolorum, saepe facere nemo accusamus nam quia explicabo dolorem laborum exercitationem! Numquam labore, optio qui consectetur, rem quia sed aut magnam nesciunt, at illo dolor quis enim ad accusantium explicabo natus?</p>
 </div>
 
 <router-outlet></router-outlet>
