@@ -1,0 +1,30 @@
+@import "../../../styles/colori.scss";
+
+.card {
+  width: 70%;
+  height: auto;
+  margin-bottom: 20px;
+
+  .card-title {
+    font-weight: bold;
+    font-size: 16px;
+    color: $primary-color-1;
+  }
+
+  .card-image {
+    height: 300px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .card-text {
+    text-align: justify;
+  }
+
+  .btn-color-custom{
+    background-color: $primary-color-1;
+    color: $secondary-color-4;
+    font-weight: bold;
+  }
+}

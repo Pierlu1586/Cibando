@@ -16,12 +16,11 @@ export class RecipesComponent implements OnInit {
   ngOnInit(): void {
     this.recipesService.getRecipes().subscribe({
       next:(res) => {
-        this.ricette = res
+        this.ricette = res;
       },
       error:(err) => {
         console.error(err);
       }
-
     })
   }
 

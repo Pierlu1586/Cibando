@@ -9,6 +9,10 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CarouselComponent } from './shared/carousel/carousel.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { RecipesComponent } from './components/recipes/recipes.component';
+import { HomeComponent } from './components/home/home.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
+import { FooterComponent } from './shared/footer/footer.component';
+import { RecipeCardComponent } from './shared/recipe-card/recipe-card.component';
 
 
 @NgModule({
@@ -16,7 +20,11 @@ import { RecipesComponent } from './components/recipes/recipes.component';
     AppComponent,
     CarouselComponent,
     HeaderComponent,
-    RecipesComponent
+    RecipesComponent,
+    HomeComponent,
+    NotFoundComponent,
+    FooterComponent,
+    RecipeCardComponent
   ],
   imports: [
     BrowserModule,

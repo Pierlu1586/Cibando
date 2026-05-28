@@ -1,0 +1,21 @@
+@import '../../../styles/colori.scss';
+
+.contenitore{
+   display: flex;
+  flex-direction: column;
+  justify-content: center; /* centra verticalmente */
+  align-items: center;     /* centra orizzontalmente */
+  height: 100vh;           /* occupa tutta l'altezza dello schermo */
+  text-align: center;      /* centra il testo */
+}
+
+.img-contenitore{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 200px;
+}
+
+h2{
+  font-size: 70px!important;
+}

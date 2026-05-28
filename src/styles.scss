@@ -1,6 +1,6 @@
-/* You can add global styles to this file, and also import other style files */
 @import "~bootstrap/dist/css/bootstrap.css";
 @import "~primeicons/primeicons.css";
+@import "./styles/colori.scss";
 
 body{
   font-family: "Montserrat", sans-serif;
@@ -10,14 +10,19 @@ nav{
   padding-left: 10px !important;
 }
 
+footer{
+  background-color: $primary-color-1;
+  color: $secondary-color-4;
+}
+
 h3{
  font-family: "Homemade Apple", cursive;
  font-size: 40px;
- text-shadow: black 2px 3px 3px;
+ text-shadow: $secondary-color-1 2px 3px 3px;
 }
 
 .nav-bg{
-  background-color: #8e210b !important;
+  background-color: $primary-color-1 !important;
 }
 
 .contenitore{
