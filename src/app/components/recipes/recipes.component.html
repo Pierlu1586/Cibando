@@ -1,6 +1,8 @@
 <div class="contenitore">
   <h2>Le nostre ricette:</h2>
-  <div class="card-container" *ngFor="let ricetta of ricette">
-    <app-recipe-card [recipe]="ricetta"></app-recipe-card>
-  </div>
+  <div class="card-container">
+
+    <app-recipe-card *ngFor="let ricetta of ricette" [recipe]="ricetta"></app-recipe-card>
 </div>
+</div>
+
