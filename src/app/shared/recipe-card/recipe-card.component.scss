@@ -1,9 +1,15 @@
 @import "../../../styles/colori.scss";
 
-.card {
-  width: 70%;
-  height: auto;
-  margin-bottom: 20px;
+  .card{
+    height: 100%;
+    padding: 10px;
+  }
+
+   .card-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 
   .card-title {
     font-weight: bold;
@@ -12,14 +18,17 @@
   }
 
   .card-image {
-    height: 300px;
+    height: 150px;
+    width: 150px;
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
+    align-self: center;
+    padding-top: 16px;
   }
 
   .card-text {
     text-align: justify;
+    height: 75px;
   }
 
   .btn-color-custom{
@@ -27,4 +36,4 @@
     color: $secondary-color-4;
     font-weight: bold;
   }
-}
+

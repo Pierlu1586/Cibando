@@ -13,6 +13,8 @@ import { HomeComponent } from './components/home/home.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { RecipeCardComponent } from './shared/recipe-card/recipe-card.component';
+import { DetailComponent } from './components/recipes/detail/detail.component';
+import { RecipesListComponent } from './components/recipes/recipes-list/recipes-list.component';
 
 
 @NgModule({
@@ -24,7 +26,9 @@ import { RecipeCardComponent } from './shared/recipe-card/recipe-card.component'
     HomeComponent,
     NotFoundComponent,
     FooterComponent,
-    RecipeCardComponent
+    RecipeCardComponent,
+    DetailComponent,
+    RecipesListComponent
   ],
   imports: [
     BrowserModule,
