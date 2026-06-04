@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
@@ -15,6 +15,11 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { RecipeCardComponent } from './shared/recipe-card/recipe-card.component';
 import { DetailComponent } from './components/recipes/detail/detail.component';
 import { RecipesListComponent } from './components/recipes/recipes-list/recipes-list.component';
+
+import { registerLocaleData } from '@angular/common';
+import localeIt from '@angular/common/locales/it';
+
+registerLocaleData(localeIt);
 
 
 @NgModule({
@@ -37,7 +42,9 @@ import { RecipesListComponent } from './components/recipes/recipes-list/recipes-
     NgbModule,
     FormsModule
   ],
-  providers: [],
+  providers: [
+    { provide: LOCALE_ID, useValue: 'it-IT' }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

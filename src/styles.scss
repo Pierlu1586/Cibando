@@ -2,34 +2,37 @@
 @import "~primeicons/primeicons.css";
 @import "./styles/colori.scss";
 
-body{
+body {
   font-family: "Montserrat", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-nav{
+nav {
   padding-left: 10px !important;
 }
 
-footer{
+footer {
   background-color: $primary-color-1;
   color: $secondary-color-4;
 }
 
-h3{
- font-family: "Homemade Apple", cursive;
- font-size: 40px;
- text-shadow: $secondary-color-1 2px 3px 3px;
+h3 {
+  font-family: "Homemade Apple", cursive;
+  font-size: 40px;
+  text-shadow: $secondary-color-1 2px 3px 3px;
 }
 
-.nav-bg{
+.nav-bg {
   background-color: $primary-color-1 !important;
 }
 
-.contenitore{
+.contenitore {
   padding: 16px !important;
 }
 
-.logo{
+.logo {
   border-radius: 10px;
   width: 50px;
   margin-right: 10px;

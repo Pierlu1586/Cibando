@@ -1,5 +1,26 @@
+<div *ngIf="ricetta">
+  <div class="detail-container">
+    <img src="{{ ricetta.image }}" />
+    <div class="detail-description">
+      <h3>{{ ricetta.title }}</h3>
+      <p>{{ ricetta.description }}</p>
+      <p class="difficulty-container">
+        <b>Difficoltà:</b
+        ><img
+          [src]="pathDifficulty + ricetta.difficulty + '.png'"
+          class="difficulty"
+        />
+      </p>
+      <p>
+        <b>Data:</b>
+        {{ ricetta.date | date: "fullDate" : "" : "it-IT" | titlecase }}
+      </p>
+    </div>
+  </div>
+</div>
 
-<img src="{{ricetta.image}}" style="width: 200px;">
-<h2>{{ricetta.title}}</h2>
-
-<p>{{ricetta.description}}</p>
+<div *ngIf="!ricetta" class="detail-container">
+  <p style="margin: 20px">
+    <b>Siamo spiacenti la ricetta da lei cercata non esiste più!</b>
+  </p>
+</div>

@@ -1,9 +1,18 @@
 <div class="contenitore">
-  <h2>Le nostre ricette:</h2>
+  <h2>Le nostre ricette</h2>
+  <p *ngIf="titoloRicettaCliccata" class="difficulty-container">
+    <strong>Ricetta:&nbsp;</strong> {{ titoloRicettaCliccata }} <strong>&nbsp;Difficoltà:</strong>
+    <img
+      [src]="pathDifficulty + difficoltaRicettaCliccata + '.png'"
+      class="difficulty"
+    />
+  </p>
   <div class="card-container">
+    <!-- Rimuovi lo slice per vederle tutte -->
     <app-recipe-card
-      *ngFor="let ricetta of ricette"
+      *ngFor="let ricetta of ricette | slice: 0 : 10"
       [recipe]="ricetta"
+      (recipeEmitter)="onRecipeReceived($event)"
     ></app-recipe-card>
   </div>
 </div>

@@ -1,5 +1,23 @@
-.contenitore{
-  h2{
+@import "../../../styles/colori.scss";
+
+.contenitore {
+  h2 {
     font-size: 50px;
   }
+
+  h4 {
+    justify-self: center;
+    font-family: "Homemade Apple", cursive;
+    color: $primary-color-1 !important;
+    font-weight: bold;
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+
+  .card-container {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+  }
+
 }

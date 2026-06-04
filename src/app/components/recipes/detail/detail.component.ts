@@ -11,6 +11,7 @@ import { ActivatedRoute, Router } from '@angular/router'; //ActivatedRoute: per 
 })
 export class DetailComponent implements OnInit {
   ricetta: Recipe;
+  pathDifficulty = "../../../../assets/images/difficulty/Star_";
 
   constructor(
     private recipeService: RecipeService,
