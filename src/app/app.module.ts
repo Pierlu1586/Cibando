@@ -1,7 +1,7 @@
 import { LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,9 +15,11 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { RecipeCardComponent } from './shared/recipe-card/recipe-card.component';
 import { DetailComponent } from './components/recipes/detail/detail.component';
 import { RecipesListComponent } from './components/recipes/recipes-list/recipes-list.component';
+import { RegistrationComponent } from './components/user/registration/registration.component';
 
 import { registerLocaleData } from '@angular/common';
 import localeIt from '@angular/common/locales/it';
+import { CreateRecipeComponent } from './components/recipes/create-recipe/create-recipe.component';
 
 registerLocaleData(localeIt);
 
@@ -33,14 +35,17 @@ registerLocaleData(localeIt);
     FooterComponent,
     RecipeCardComponent,
     DetailComponent,
-    RecipesListComponent
+    RecipesListComponent,
+    RegistrationComponent,
+    CreateRecipeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     NgbModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     { provide: LOCALE_ID, useValue: 'it-IT' }
