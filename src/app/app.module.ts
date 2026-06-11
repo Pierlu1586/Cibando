@@ -2,10 +2,18 @@ import { LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+
+
+import { PasswordModule } from 'primeng/password';
+import { DividerModule } from 'primeng/divider';
+import { ToastModule } from 'primeng/toast';
+import { MessageService } from 'primeng/api';
+import { PaginatorModule } from 'primeng/paginator';
+
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
+import { AppComponent } from './app.component';
 import { CarouselComponent } from './shared/carousel/carousel.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { RecipesComponent } from './components/recipes/recipes.component';
@@ -20,6 +28,7 @@ import { RegistrationComponent } from './components/user/registration/registrati
 import { registerLocaleData } from '@angular/common';
 import localeIt from '@angular/common/locales/it';
 import { CreateRecipeComponent } from './components/recipes/create-recipe/create-recipe.component';
+
 
 registerLocaleData(localeIt);
 
@@ -37,7 +46,7 @@ registerLocaleData(localeIt);
     DetailComponent,
     RecipesListComponent,
     RegistrationComponent,
-    CreateRecipeComponent
+    CreateRecipeComponent,
   ],
   imports: [
     BrowserModule,
@@ -45,9 +54,14 @@ registerLocaleData(localeIt);
     BrowserAnimationsModule,
     NgbModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    PasswordModule,
+    DividerModule,
+    ToastModule,
+    PaginatorModule
   ],
   providers: [
+    MessageService,
     { provide: LOCALE_ID, useValue: 'it-IT' }
   ],
   bootstrap: [AppComponent]

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PaginatorState } from 'primeng/paginator';
 import { Recipe } from 'src/app/models/recipe.model';
 import { RecipeService } from 'src/app/services/recipe.service';
 
@@ -12,6 +13,9 @@ export class RecipesListComponent implements OnInit {
   titoloRicettaCliccata: string;
   difficoltaRicettaCliccata: number;
   pathDifficulty = '../../../../assets/images/difficulty/Star_';
+
+  page = 1;
+  ricettePerPagina = 5;
 
   constructor(private recipesService: RecipeService) {}
 
@@ -35,4 +39,11 @@ export class RecipesListComponent implements OnInit {
       this.difficoltaRicettaCliccata = event.difficolta;
     }
   }
+
+  paginate(event:PaginatorState){
+    event.page = event.page + 1;
+    this.page = event.page;
+  }
+
+
 }

@@ -47,3 +47,13 @@ h3 {
   height: 100%;
   object-fit: cover;
 }
+
+.p-password{
+  display: block !important;
+}
+
+.p-inputtext, .p-password-input{
+  width: 100%!important;
+  height: 38px!important;
+
+}

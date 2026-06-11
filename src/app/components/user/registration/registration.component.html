@@ -1,4 +1,6 @@
-<div class="contenitore">
+
+<!-- TEMPLATE DRIVEN FORM -->
+<!-- <div class="contenitore">
   <div class="card mb-3">
     <div class="row">
       <div class="image-container">
@@ -17,14 +19,12 @@
             <div class="form-field">
               <label for="nameField" class="form-label">Nome</label>
               <input type="text" class="form-control" id="nameField" name="nome" ngModel required #nome="ngModel"/>
-              <div class="valid-feedback">Looks good!</div>
               <div *ngIf="nome.hasError('required') && nome.touched" class="invalid">- Il campo nome è obbligatorio</div>
             </div>
 
             <div class="form-field">
               <label for="surnameField" class="form-label">Cognome</label>
               <input type="text" class="form-control" id="surnameField" name="cognome" ngModel required #cognome="ngModel"/>
-              <div class="valid-feedback">Looks good!</div>
               <div *ngIf="cognome.hasError('required') && cognome.touched" class="invalid">- Il campo cognome è obbligatorio</div>
             </div>
 
@@ -40,6 +40,16 @@
               <input type="password" class="form-control" id="passwordField" name="password" ngModel required #password="ngModel"/>
               <div class="valid-feedback">Looks good!</div>
               <div *ngIf="password.hasError('required') && password.touched" class="invalid"> - Il campo password è obbligatorio</div>
+              <div *ngIf="password.hasError('pattern') && password.touched" class="invalid" style="font-size: 10px;">
+                <ul>
+                  <li>La password deve avere min 8 caratteri.</li>
+                  <li>La password deve avere max 16 caratteri.</li>
+                  <li>La password deve contenere almeno una lettera minuscola.</li>
+                  <li>La password deve contenere almeno una lettera maiuscola.</li>
+                  <li>La password deve contenere almeno un simbolo.</li>
+                  <li>La password non deve contenere spazi</li>
+                </ul>
+              </div>
             </div>
 
             <div class="form-field">
@@ -57,6 +67,86 @@
               <button type="submit" class="btn submit-btn" [disabled]="form.invalid">Registrati</button>
             </div>
 
+          </form>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+
+<!-- REACTIVE FORM -->
+
+  <div class="contenitore">
+  <div class="card mb-3">
+    <div class="row">
+      <div class="image-container">
+        <img
+          src="../../../../assets/images/food.jpg"
+          class="img-fluid rounded"
+          alt="Alimenti"
+        />
+      </div>
+
+      <div class="form-container">
+        <div class="card-body">
+          <h2 class="card-title">Registrati su Cibando</h2>
+          <form [formGroup]="form" (ngSubmit)="onSubmit()">
+
+            <div class="form-field">
+              <label for="nameField" class="form-label">Nome</label>
+              <input type="text" class="form-control" id="nameField" formControlName="name"/>
+              <div *ngIf="form.get('name').getError('required') && form.get('name').touched" class="invalid">Il campo nome è obbligatorio</div>
+            </div>
+
+            <div class="form-field">
+              <label for="surnameField" class="form-label">Cognome</label>
+              <input type="text" class="form-control" id="surnameField"  formControlName="surname" />
+              <div *ngIf="form.get('surname').getError('required') && form.get('surname').touched" class="invalid">Il campo cognome è obbligatorio</div>
+            </div>
+
+            <div class="form-field">
+              <label for="emailField" class="form-label">Email</label>
+              <input type="email" class="form-control" id="emailField" placeholder="name@example.com" formControlName="email" />
+              <div *ngIf="form.get('email').getError('required') && form.get('email').touched" class="invalid">Il campo email è obbligatorio</div>
+              <div *ngIf="form.get('email').getError('email') && form.get('email').touched" class="invalid">L'email inserita non è valida</div>
+            </div>
+
+            <div class="form-field">
+              <label for="passwordField" class="form-label">Password</label>
+              <!-- <input type="password" class="form-control" id="passwordField" formControlName="password"  /> -->
+              <p-password inputId="passwordField" name="passwordField" [toggleMask]="true" autocomplete="off" strongRegex="^(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[^\w\d\s:])([^\s]){8,16}$" formControlName="password"/>
+              <div class="valid-feedback">Looks good!</div>
+              <div *ngIf="form.get('password').getError('required') && form.get('password').touched" class="invalid">Il campo password è obbligatorio</div>
+              <div *ngIf="form.get('password').getError('pattern') && form.get('password').touched" class="invalid" style="font-size: 10px;">
+                <ul>
+                  <li>La password deve avere min 8 caratteri.</li>
+                  <li>La password deve avere max 16 caratteri.</li>
+                  <li>La password deve contenere almeno una lettera minuscola.</li>
+                  <li>La password deve contenere almeno una lettera maiuscola.</li>
+                  <li>La password deve contenere almeno un simbolo.</li>
+                  <li>La password non deve contenere spazi</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="form-field">
+              <label for="confirmPasswordField" class="form-label">Conferma password</label>
+              <!-- <input type="password" class="form-control" id="confirmPasswordField" formControlName="confirmPassword"/> -->
+              <p-password inputId="confirmPasswordField" name="confirmPasswordField" [toggleMask]="true" autocomplete="off" [feedback]="false" formControlName="confirmPassword"/>
+              <div *ngIf="form.get('confirmPassword').getError('required') && form.get('confirmPassword').touched" class="invalid">Il campo conferma password è obbligatorio</div>
+              <div *ngIf="form.getError('diversa') && form.get('confirmPassword').touched" class="invalid">Le password non corrispondono</div>
+            </div>
+
+            <div class="form-field">
+              <input class="form-check-input" type="checkbox" id="checkDefault" formControlName="serviceTerms"/>
+              <label class="form-check-label" for="checkDefault">Dichiaro di accettare i <a href="">Termini del Servizio</a></label>
+              <div *ngIf="form.get('serviceTerms').getError('required') && form.get('serviceTerms').touched" class="invalid" style="font-size: 10px;">Per procedere con la registrazione è necessario accettare i Termini del Servizio</div>
+            </div>
+
+            <div>
+              <button type="submit" class="btn submit-btn" [disabled]="form.invalid">Registrati</button>
+            </div>
+
 
           </form>
         </div>
@@ -64,73 +154,3 @@
     </div>
   </div>
 
-  <!-- <section class="vh-100" style="background-color: #eee;">
-  <div class="container h-100">
-    <div class="row d-flex justify-content-center align-items-center h-100">
-      <div class="col-lg-12 col-xl-11">
-        <div class="card text-black" style="border-radius: 25px;">
-          <div class="card-body p-md-5">
-            <div class="row justify-content-center">
-              <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
-
-                <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Registrati su Cibando</p>
-
-                <form class="mx-1 mx-md-4" #form="ngForm" (ngSubmit)="onSubmit(form.value)">
-
-                  <div class="d-flex flex-row align-items-center mb-4">
-                    <i class="fas fa-user fa-lg me-3 fa-fw"></i>
-                    <div data-mdb-input-init class="form-outline flex-fill mb-0">
-                      <input type="text" id="form3Example1c" class="form-control" name="nome" ngModel/>
-                      <label class="form-label" for="form3Example1c">Nome</label>
-                    </div>
-                  </div>
-
-                  <div class="d-flex flex-row align-items-center mb-4">
-                    <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
-                    <div data-mdb-input-init class="form-outline flex-fill mb-0">
-                      <input type="email" id="form3Example3c" class="form-control" name="email" ngModel/>
-                      <label class="form-label" for="form3Example3c">Email</label>
-                    </div>
-                  </div>
-
-                  <div class="d-flex flex-row align-items-center mb-4">
-                    <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
-                    <div data-mdb-input-init class="form-outline flex-fill mb-0">
-                      <input type="password" id="form3Example4c" class="form-control"  name="password" ngModel/>
-                      <label class="form-label" for="form3Example4c">Password</label>
-                    </div>
-                  </div>
-
-                  <div class="d-flex flex-row align-items-center mb-4">
-                    <i class="fas fa-key fa-lg me-3 fa-fw"></i>
-                    <div data-mdb-input-init class="form-outline flex-fill mb-0">
-                      <input type="password" id="form3Example4cd" class="form-control" name="ripetiPassword" ngModel/>
-                      <label class="form-label" for="form3Example4cd">Ripeti la password</label>
-                    </div>
-                  </div>
-
-                  <div class="form-check d-flex justify-content-center mb-5">
-                    <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3c" name="termsOfService" ngModel/>
-                    <label class="form-check-label" for="form2Example3">
-                     Dichiaro di accettare i <a href="#!">Termini del servizio</a>
-                    </label>
-                  </div>
-
-                  <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
-                    <button  type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-lg">Registrati</button>
-                  </div>
-
-                </form>
-
-              </div>
-              <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2" >
-                <img src="../../../../assets/images/food.jpg" class="img-fluid" alt="Sample food" style="border-radius: 25px;">
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section> -->
-</div>
