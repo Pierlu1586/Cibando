@@ -16,8 +16,8 @@ const routes: Routes = [
   { path:'ricette', component: RecipesComponent, children: [ // Children sono i figli di ricette
       { path:'', component: RecipesListComponent, pathMatch: 'full'},
       { path:'dettaglio/:title/:_id', component: DetailComponent}, //routing dinamico con passsaggio di parametro
-      { path: 'aggiungi_ricetta', component: CreateRecipeComponent},
-  ] },
+  ]},
+  { path: 'aggiungi_ricetta', component: CreateRecipeComponent},
   { path: 'registrazione', component: RegistrationComponent},
   //{path:'contatti', component: ContactsComponent}
   { path:'**', component: NotFoundComponent}

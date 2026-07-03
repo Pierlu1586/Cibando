@@ -2,7 +2,7 @@ import { Recipe } from "../models/recipe.model";
 
 export const RECIPES: Recipe[] = [
   {
-    _id: 1,
+    id: 1,
     title: "Carbonara Classica",
     description: "La tradizionale pasta romana con guanciale croccante, pecorino e uova.",
     image: "https://images.unsplash.com/photo-1612874742237-6526221588e3",
@@ -11,7 +11,7 @@ export const RECIPES: Recipe[] = [
     published: true,
   },
   {
-    _id: 2,
+    id: 2,
     title: "Lasagna alla Bolognese",
     description: "Strati di pasta fresca con ragù, besciamella e parmigiano.",
     image: "https://images.unsplash.com/photo-1619895092538-128341789043",
@@ -20,7 +20,7 @@ export const RECIPES: Recipe[] = [
     published: true,
   },
   {
-    _id: 3,
+    id: 3,
     title: "Risotto ai Funghi Porcini",
     description: "Risotto cremoso con porcini freschi e prezzemolo.",
     image: "https://images.unsplash.com/photo-1633436375795-12b3b339712f",
@@ -29,7 +29,7 @@ export const RECIPES: Recipe[] = [
     published: true,
   },
   {
-    _id: 4,
+    id: 4,
     title: "Pizza Margherita",
     description: "Pizza napoletana con pomodoro, mozzarella e basilico.",
     image: "https://images.unsplash.com/photo-1604382355076-af4b0eb60143",
@@ -38,7 +38,7 @@ export const RECIPES: Recipe[] = [
     published: true,
   },
   {
-    _id: 5,
+    id: 5,
     title: "Tiramisù Tradizionale",
     description: "Dolce al cucchiaio con mascarpone, caffè e cacao.",
     image: "https://images.unsplash.com/photo-1571877227200-a0d98ea607e9",
@@ -47,7 +47,7 @@ export const RECIPES: Recipe[] = [
     published: true,
   },
   {
-    _id: 6,
+    id: 6,
     title: "Parmigiana di Melanzane",
     description: "Melanzane fritte a strati con sugo e mozzarella.",
     image: "https://images.unsplash.com/photo-1629115916087-7e8c114a24ed",
@@ -56,7 +56,7 @@ export const RECIPES: Recipe[] = [
     published: true,
   },
   {
-    _id: 7,
+    id: 7,
     title: "Pasta all'Amatriciana",
     description: "Pasta con guanciale, pecorino romano e salsa di pomodoro.",
     image: "https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9",
@@ -65,7 +65,7 @@ export const RECIPES: Recipe[] = [
     published: false,
   },
   {
-    _id: 8,
+    id: 8,
     title: "Gnocchi al Pesto",
     description: "Gnocchi di patate con pesto genovese fresco.",
     image: "https://images.unsplash.com/photo-1551183053-bf91a1d81141",
@@ -74,7 +74,7 @@ export const RECIPES: Recipe[] = [
     published: true,
   },
   {
-    _id: 9,
+    id: 9,
     title: "Polenta con Spezzatino",
     description: "Polenta morbida accompagnata da uno spezzatino saporito.",
     image: "https://images.unsplash.com/photo-1544025162-d76694265947",
@@ -83,7 +83,7 @@ export const RECIPES: Recipe[] = [
     published: true,
   },
   {
-    _id: 10,
+    id: 10,
     title: "Focaccia Genovese",
     description: "Focaccia soffice con olio extravergine e sale grosso.",
     image: "https://images.unsplash.com/photo-1509440159596-0249088772ff",
@@ -92,7 +92,7 @@ export const RECIPES: Recipe[] = [
     published: true,
   },
   {
-    _id: 11,
+    id: 11,
     title: "Arancini Siciliani",
     description: "Croccanti palline di riso ripiene di ragù e mozzarella.",
     image: "https://images.unsplash.com/photo-1601050690597-df0568f70950",
@@ -101,7 +101,7 @@ export const RECIPES: Recipe[] = [
     published: false,
   },
   {
-    _id: 12,
+    id: 12,
     title: "Panna Cotta ai Frutti Rossi",
     description: "Dessert cremoso servito con salsa ai frutti di bosco.",
     image: "https://images.unsplash.com/photo-1488477181946-6428a0291777",
@@ -110,7 +110,7 @@ export const RECIPES: Recipe[] = [
     published: true,
   },
   {
-    _id: 13,
+    id: 13,
     title: "Osso Buco alla Milanese",
     description: "Stinco di vitello cotto lentamente con gremolada.",
     image: "https://images.unsplash.com/photo-1547592180-85f173990554",
@@ -119,7 +119,7 @@ export const RECIPES: Recipe[] = [
     published: true,
   },
   {
-    _id: 14,
+    id: 14,
     title: "Spaghetti alle Vongole",
     description: "Spaghetti con vongole fresche, aglio e prezzemolo.",
     image: "https://images.unsplash.com/photo-1625944230945-1b7dd3b949ab",
@@ -128,7 +128,7 @@ export const RECIPES: Recipe[] = [
     published: true,
   },
   {
-    _id: 15,
+    id: 15,
     title: "Cannoli Siciliani",
     description: "Cialde croccanti ripiene di ricotta dolce.",
     image: "https://images.unsplash.com/photo-1519864600265-abb23847ef2c",
@@ -137,7 +137,7 @@ export const RECIPES: Recipe[] = [
     published: false,
   },
   {
-    _id: 16,
+    id: 16,
     title: "Minestrone di Verdure",
     description: "Zuppa rustica con verdure di stagione e legumi.",
     image: "https://images.unsplash.com/photo-1547592166-23ac45744acd",
@@ -146,7 +146,7 @@ export const RECIPES: Recipe[] = [
     published: true,
   },
   {
-    _id: 17,
+    id: 17,
     title: "Cacio e Pepe",
     description: "Pasta cremosa con pecorino romano e pepe nero.",
     image: "https://images.unsplash.com/photo-1645112411341-6c4fd023714a",
@@ -155,7 +155,7 @@ export const RECIPES: Recipe[] = [
     published: true,
   },
   {
-    _id: 18,
+    id: 18,
     title: "Bruschette al Pomodoro",
     description: "Pane tostato con pomodorini freschi e basilico.",
     image: "https://images.unsplash.com/photo-1505253716362-afaea6d3d1af",
@@ -164,7 +164,7 @@ export const RECIPES: Recipe[] = [
     published: true,
   },
   {
-    _id: 19,
+    id: 19,
     title: "Tagliatelle al Ragù",
     description: "Pasta fresca con il classico ragù bolognese.",
     image: "https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9",
@@ -173,7 +173,7 @@ export const RECIPES: Recipe[] = [
     published: true,
   },
   {
-    _id: 20,
+    id: 20,
     title: "Cotoletta alla Milanese",
     description: "Costoletta impanata e fritta nel burro chiarificato.",
     image: "https://images.unsplash.com/photo-1512058564366-18510be2db19",
@@ -182,7 +182,7 @@ export const RECIPES: Recipe[] = [
     published: true,
   },
   {
-    _id: 21,
+    id: 21,
     title: "Caponata Siciliana",
     description: "Contorno agrodolce con melanzane, olive e capperi.",
     image: "https://images.unsplash.com/photo-1547592180-85f173990554",
@@ -191,7 +191,7 @@ export const RECIPES: Recipe[] = [
     published: false,
   },
   {
-    _id: 22,
+    id: 22,
     title: "Frittata di Zucchine",
     description: "Frittata soffice con zucchine fresche e parmigiano.",
     image: "https://images.unsplash.com/photo-1510693206972-df098062cb71",
@@ -200,7 +200,7 @@ export const RECIPES: Recipe[] = [
     published: true,
   },
   {
-    _id: 23,
+    id: 23,
     title: "Ribollita Toscana",
     description: "Zuppa toscana con cavolo nero, pane e fagioli.",
     image: "https://images.unsplash.com/photo-1547592166-23ac45744acd",
@@ -209,7 +209,7 @@ export const RECIPES: Recipe[] = [
     published: true,
   },
   {
-    _id: 24,
+    id: 24,
     title: "Piadina Romagnola",
     description: "Pane sottile farcito con squacquerone e rucola.",
     image: "https://images.unsplash.com/photo-1529042410759-befb1204b468",
@@ -218,7 +218,7 @@ export const RECIPES: Recipe[] = [
     published: true,
   },
   {
-    _id: 25,
+    id: 25,
     title: "Gelato Artigianale alla Nocciola",
     description: "Gelato cremoso preparato con nocciole tostate.",
     image: "https://images.unsplash.com/photo-1563805042-7684c019e1cb",
@@ -227,7 +227,7 @@ export const RECIPES: Recipe[] = [
     published: false,
   },
   {
-    _id: 26,
+    id: 26,
     title: "Sarde in Saor",
     description: "Piatto veneziano con sarde, cipolle e aceto.",
     image: "https://images.unsplash.com/photo-1544025162-d76694265947",
@@ -236,7 +236,7 @@ export const RECIPES: Recipe[] = [
     published: true,
   },
   {
-    _id: 27,
+    id: 27,
     title: "Pesto alla Genovese",
     description: "Salsa fresca con basilico, pinoli e parmigiano.",
     image: "https://images.unsplash.com/photo-1473093295043-cdd812d0e601",
@@ -245,7 +245,7 @@ export const RECIPES: Recipe[] = [
     published: true,
   },
   {
-    _id: 28,
+    id: 28,
     title: "Strudel di Mele",
     description: "Dolce con mele, uvetta e cannella avvolto in pasta sottile.",
     image: "https://images.unsplash.com/photo-1568571780765-9276ac8b75a2",
@@ -254,7 +254,7 @@ export const RECIPES: Recipe[] = [
     published: true,
   },
   {
-    _id: 29,
+    id: 29,
     title: "Insalata Caprese",
     description: "Pomodoro, mozzarella di bufala e basilico fresco.",
     image: "https://images.unsplash.com/photo-1563379091339-03246963d29a",
@@ -263,7 +263,7 @@ export const RECIPES: Recipe[] = [
     published: true,
   },
   {
-    _id: 30,
+    id: 30,
     title: "Baccalà Mantecato",
     description: "Crema veneziana di baccalà servita con polenta.",
     image: "https://images.unsplash.com/photo-1559847844-5315695dadae",

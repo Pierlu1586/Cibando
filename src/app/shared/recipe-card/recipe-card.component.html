@@ -11,12 +11,32 @@
   <div class="card-body">
     <h5 class="card-title">{{ recipe.title }}</h5>
     <p class="card-text">{{ recipe.description }}</p>
+    <div class="button-container">
     <a
       class="btn btn-color-custom"
-      routerLink="dettaglio/{{ recipe.title }}/{{ recipe._id }}"
+      routerLink="dettaglio/{{ recipe.title }}/{{ recipe.id }}"
       >Visualizza</a
     >
+
+    <button *ngIf="erasable" type="button" class="btn btn-danger delete-btn" (click)="open(recipe.id, recipe.title)">
+      <span class="material-symbols-outlined">delete</span>
+    </button>
+    </div>
   </div>
 
+
   <!-- <div>{{esempioTesto | slice: 0:accorciaDescrizione(esempioTesto)}}</div> -->
-</div>
+
+<ng-template #modaldeleteRecipe let-modal>
+  <div class="modal-header">
+    <button type="button" class="btn-close" aria-label="close" (click)="modal.dismiss()"></button>
+  </div>
+  <div class="modal-body">
+    <h4>Vuoi davvero eliminare la ricetta "{{recipe.title}}"?</h4>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn" (click)="modal.dismiss()" ngbAutofocus>Annulla</button>
+    <button type="button" class="btn btn-primary" (click)="modal.close()" >Elimina</button>
+  </div>
+</ng-template>
+

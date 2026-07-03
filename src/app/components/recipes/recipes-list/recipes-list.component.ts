@@ -22,9 +22,11 @@ export class RecipesListComponent implements OnInit {
   ngOnInit(): void {
     this.recipesService.getRecipes().subscribe({
       next: (res) => {
+        console.log('Sto chiamando getlastFourRecipes');
         this.ricette = res;
       },
       error: (err) => {
+        console.log('Sto chiamando getlastFourRecipes ERRORE');
         console.error(err);
       },
     });

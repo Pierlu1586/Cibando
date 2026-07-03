@@ -33,7 +33,17 @@ export class RegistrationComponent {
     const user = {nome: this.form.value.name, email: this.form.value.email};
 
     this.userService.datiUtente.next(user);
-    this.router.navigate(['home']);
+
+    console.log('ABOUT TO CALL insertUser');
+
+    this.userService.insertUser(this.form.value).subscribe({
+      next: (res) => {console.log('A',res);
+        this.userService.datiUtente.next(user);
+        this.router.navigate(['home']);
+      },
+      error: (err) => {console.error(err);}
+    });
+
   }
 
 /*     onSubmit(form) {

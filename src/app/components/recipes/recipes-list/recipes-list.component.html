@@ -1,4 +1,4 @@
-<div class="contenitore">
+<div class="contenitore" *ngIf="ricette; else noRecipes">
   <h2>Le nostre ricette</h2>
   <p *ngIf="titoloRicettaCliccata" class="difficulty-container">
     <strong>Ricetta:&nbsp;</strong> {{ titoloRicettaCliccata }} <strong>&nbsp;Difficoltà:</strong>
@@ -7,11 +7,11 @@
       class="difficulty"
     />
   </p>
-  <span><a routerLink="aggiungi_ricetta">Aggiungi ricetta</a></span>
   <div class="card-container">
     <!-- Rimuovi lo slice per vederle tutte"-->
     <app-recipe-card
       *ngFor="let ricetta of ricette | slice: (page * ricettePerPagina) -  ricettePerPagina : page * ricettePerPagina"
+      [erasable]="true"
       [recipe]="ricetta"
       (recipeEmitter)="onRecipeReceived($event)"
     ></app-recipe-card>
@@ -21,3 +21,7 @@
     <p-paginator (onPageChange)="paginate($event)" [rows]="ricettePerPagina" [totalRecords]="ricette.length"/>
   </div>
 </div>
+
+<ng-template #noRecipes>
+  Non ci sono ricette disponibili.
+</ng-template>

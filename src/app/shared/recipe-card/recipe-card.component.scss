@@ -35,5 +35,23 @@
     background-color: $primary-color-1;
     color: $secondary-color-4;
     font-weight: bold;
+    width: 150px;
   }
 
+  .delete-btn{
+    width: 38px !important;
+    height: 38px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .button-container{
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .modal-header{
+    background-color: $primary-color-1 !important;
+    color: $secondary-color-4 !important;
+  }

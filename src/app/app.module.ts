@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http'
 
 
 import { PasswordModule } from 'primeng/password';
@@ -55,6 +56,7 @@ registerLocaleData(localeIt);
     NgbModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule,
     PasswordModule,
     DividerModule,
     ToastModule,

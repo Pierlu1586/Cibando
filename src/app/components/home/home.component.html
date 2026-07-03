@@ -38,10 +38,32 @@
 
 <div class="contenitore">
   <h4>Le ultime ricette</h4>
+  <!-- <button (click)="open(modalRegistrazione)" class="btn">APRI MODALE</button> -->
   <div class="card-container">
-    <app-recipe-card *ngFor="let ricetta of ricette"
+    <app-recipe-card [erasable]="false" *ngFor="let ricetta of ricette"
       [recipe]="ricetta"></app-recipe-card>
   </div>
 </div>
+
+<ng-template #modalRegistrazione let-modal>
+  <div class="modal-header">
+    <button type="button" class="btn-close" aria-label="close" (click)="modal.dismiss()"></button>
+  </div>
+  <div class="modal-body">
+    <h2>Grazie per esserti registrato su Cibando! <br>Ecco i tuoi dati:</h2>
+    <ul>
+      <li>
+        nome: {{nome}}
+      </li>
+      <li>
+        email: {{email}}
+      </li>
+    </ul>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn" (click)="modal.dismiss()" ngbAutofocus>Chiudi</button>
+    <!-- <button type="button" class="btn btn-primary" (click)="modal.close()" >Azione</button> -->
+  </div>
+</ng-template>
 
 
